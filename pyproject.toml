@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robustsignalmaker"
+dynamic = ["version"]
+description = "NaN-aware, leakage-free stability selection for scientific signals and spectra"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Amanda S Barnard" }]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "scikit-learn>=1.3",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.optional-dependencies]
+tables = ["pandas>=1.5"]
+dev = ["pytest>=7.0", "pytest-cov>=4.0", "pandas>=1.5"]
+
+[tool.setuptools]
+packages = ["robustsignalmaker"]
+
+[tool.setuptools.dynamic]
+version = { attr = "robustsignalmaker.__version__" }
+
+[tool.setuptools.package-data]
+robustsignalmaker = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+# Coverage policy: target 90% per module. ALWAYS measure with the
+# whole-package job (py -m pytest tests --cov=robustsignalmaker) and read the
+# per-module rows; never narrow --cov to a submodule (a known pytest-cov
+# quirk makes submodule-scoped runs fail with numpy sentinel errors that the
+# whole-package job does not have).
+[tool.coverage.run]
+source = ["robustsignalmaker"]
+
+[tool.coverage.report]
+show_missing = true
+precision = 0
+fail_under = 98
