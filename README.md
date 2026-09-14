@@ -1,5 +1,14 @@
 # RobustSignalMaker
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-440154.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.9%2B-414487.svg)](https://www.python.org/)
+[![Version](https://img.shields.io/badge/version-0.2.0-31688e.svg)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-283-21918c.svg)](tests/)
+[![Coverage](https://img.shields.io/badge/coverage-100%25-22a884.svg)](tests/)
+<!-- Once the package is live on PyPI, add:
+[![PyPI](https://img.shields.io/pypi/v/robustsignalmaker.svg?color=2a788e)](https://pypi.org/project/robustsignalmaker/)
+It renders as a red "invalid" badge until then, so it is held back. -->
+
 NaN-aware, leakage-free stability selection for scientific signals and
 spectra. RSM identifies the important parts of a series (time-, space-,
 mass-series and the like) to retain and removes the rest, returning a
@@ -182,6 +191,43 @@ library.
 - `RELATED_WORK.md` novelty defence against prior art: ten fields of
   related work with citations, a per-claim threat matrix naming what
   would falsify each claim, and an explicit list of what is NOT claimed
+
+## Citation
+
+There is no paper for RSM yet, so cite the software itself:
+
+```bibtex
+@software{barnard2026robustsignalmaker,
+  author  = {Barnard, Amanda S},
+  title   = {{RobustSignalMaker}: NaN-aware, leakage-free stability
+             selection for scientific signals and spectra},
+  year    = {2026},
+  version = {0.2.0},
+  url     = {https://github.com/amaxiom/RobustSignalMaker},
+}
+```
+
+`CITATION.cff` carries the same metadata in Citation File Format, which is
+what GitHub reads to offer the "Cite this repository" button.
+
+The shared stability-selection and leakage-safe nested-CV framework that RSM
+re-implements for the sampling axis is described in the RobustModelMaker
+preprint, which is the right secondary citation if you are citing the method
+rather than this implementation:
+
+```bibtex
+@misc{barnard2026robust,
+  title  = {RobustModelMaker: Coupling Bootstrap Stability Selection with
+            Leakage-Safe Nested Cross-Validation for Scientific Machine
+            Learning},
+  author = {Amanda S Barnard},
+  year   = {2026},
+  eprint = {2606.01566},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url    = {https://arxiv.org/abs/2606.01566},
+}
+```
 
 ## Licence
 
