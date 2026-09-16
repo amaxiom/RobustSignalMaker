@@ -17,8 +17,8 @@ Third sibling in the RobustMaker family:
 
 | Package | Selects | Data |
 |---|---|---|
-| RobustModelMaker (RMM) | columns | tabular features |
-| RobustPixelMaker (RPM) | patches | scientific images |
+| [RobustModelMaker](https://github.com/amaxiom/RobustModelMaker) (RMM) | columns | tabular features |
+| [RobustPixelMaker](https://github.com/amaxiom/RobustPixelMaker) (RPM) | patches | scientific images |
 | RobustSignalMaker (RSM) | points and bands | signals and spectra |
 
 **What it is for.** The same job RMM does for tabular columns, done for the
