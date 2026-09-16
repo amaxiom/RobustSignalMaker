@@ -5,9 +5,7 @@
 [![Version](https://img.shields.io/badge/version-0.2.0-31688e.svg)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-283-21918c.svg)](tests/)
 [![Coverage](https://img.shields.io/badge/coverage-100%25-22a884.svg)](tests/)
-<!-- Once the package is live on PyPI, add:
 [![PyPI](https://img.shields.io/pypi/v/robustsignalmaker.svg?color=2a788e)](https://pypi.org/project/robustsignalmaker/)
-It renders as a red "invalid" badge until then, so it is held back. -->
 
 NaN-aware, leakage-free stability selection for scientific signals and
 spectra. RSM identifies the important parts of a series (time-, space-,
